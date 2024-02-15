@@ -83,10 +83,11 @@ const App = () => {
             [grid[combination[0]]]: score[grid[combination[0]]] + 1,
           })
         );
-      }
-      if (!grid.includes("")) {
-        setWinner("Draw");
-        setGameOver(true);
+      } else {
+        if (!grid.includes("")) {
+          setWinner("Draw");
+          setGameOver(true);
+        }
       }
     });
   }, [grid]);
