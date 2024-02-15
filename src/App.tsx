@@ -84,16 +84,18 @@ const App = () => {
           })
         );
       }
+      if (!grid.includes("")) {
+        setWinner("Draw");
+        setGameOver(true);
+      }
     });
-    if (!grid.includes("")) {
-      setWinner("Draw");
-      setGameOver(true);
-    }
   }, [grid]);
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center relative">
-      <h1 className="absolute top-2 text-4xl font-bold font-mono underline">TIC TAC TOE</h1>
+      <h1 className="absolute top-2 text-4xl font-bold font-mono underline">
+        TIC TAC TOE
+      </h1>
       <div className="w-[400px] flex flex-col items-center gap-10">
         <div className="flex w-full justify-between text-3xl font-bold">
           <p>X: {score.X}</p>
