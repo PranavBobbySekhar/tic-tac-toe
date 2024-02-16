@@ -7,7 +7,13 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        '4xl': '60px'
+        '4xl': '60px',
+        '3.5xl': '45px'
+      },
+      screens: {
+        'sm': {
+          'max': '640px'
+        }
       }
     },
   },

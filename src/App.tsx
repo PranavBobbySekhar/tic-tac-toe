@@ -93,17 +93,17 @@ const App = () => {
   }, [grid]);
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center relative">
-      <h1 className="absolute top-2 text-4xl font-bold font-mono underline">
+    <div className="bg-blue-200 h-lvh w-lvh flex flex-col items-center justify-center relative">
+      <h1 className="absolute top-2 text-4xl sm:text-3.5xl font-bold font-mono underline">
         TIC TAC TOE
       </h1>
-      <div className="w-[400px] flex flex-col items-center gap-10">
+      <div className="w-[400px] sm:w-[300px] flex flex-col items-center gap-10 sm:mt-28">
         <div className="flex w-full justify-between text-3xl font-bold">
           <p>X: {score.X}</p>
           <h1>{winner !== "" ? `${winner}` : `Turn: ${turnToPlay}`}</h1>
           <p>O: {score.O}</p>
         </div>
-        <div className="flex gap-8">
+        <div className="flex gap-8 sm:flex-col">
           <Board
             changeTurn={() => setTurnToPlay(turnToPlay === "X" ? "O" : "X")}
             turnToPlay={turnToPlay}
